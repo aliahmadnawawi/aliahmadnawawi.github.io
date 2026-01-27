@@ -20,6 +20,7 @@ body {
   font-family: "Space Grotesk", system-ui, sans-serif;
   color: var(--ink);
   background: var(--bg);
+  min-width: 1200px;
 }
 
 a {
@@ -322,72 +323,3 @@ img {
   color: var(--muted);
 }
 
-
-@media (max-width: 900px) {
-  .hero-content {
-    grid-template-columns: 1fr;
-  }
-
-  .nav-links {
-    display: none;
-  }
-
-  .cv-card {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .nav {
-    gap: 10px;
-  }
-}
-
-@media (max-width: 600px) {
-  .hero {
-    padding-top: 70px;
-  }
-
-  .btn {
-    width: 100%;
-    justify-content: center;
-  }
-
-  .hero-content {
-    gap: 24px;
-  }
-
-  .section {
-    padding: 56px 20px;
-  }
-
-  .card {
-    border-radius: 18px;
-  }
-
-  .site-header {
-    position: sticky;
-  }
-
-  .nav-actions .btn {
-    width: auto;
-  }
-
-  .social-grid,
-  .cards-grid,
-  .video-grid,
-  .game-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .link-card {
-    text-align: left;
-  }
-
-  .hero-text h1 {
-    font-size: 2.3rem;
-  }
-
-  .hero-actions {
-    flex-direction: column;
-  }
-}

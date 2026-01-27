@@ -23,7 +23,7 @@ const renderProjects = (projects) => {
         <span>${formatDate(repo.updated_at)}</span>
       </div>
       <div class="section-actions">
-        <a class="btn ghost" href="${repo.html_url}" target="_blank">Lihat Repo</a>
+        <a class="btn ghost" href="${repo.html_url}" target="_blank">View Repo</a>
       </div>
     `;
     projectsGrid.appendChild(card);
