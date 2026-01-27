@@ -1,4 +1,19 @@
 const projectsGrid = document.getElementById("projects-grid");
+const themeToggle = document.getElementById("theme-toggle");
+const backToTop = document.getElementById("back-to-top");
+const storageKey = "aan-theme";
+
+const setTheme = (theme) => {
+  document.documentElement.setAttribute("data-theme", theme);
+  themeToggle.setAttribute("aria-pressed", theme === "dark");
+  themeToggle.textContent = theme === "dark" ? "Light Mode" : "Dark Mode";
+};
+
+const getPreferredTheme = () => {
+  const stored = localStorage.getItem(storageKey);
+  if (stored) return stored;
+  return window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+};
 
 const formatDate = (dateString) => {
   const date = new Date(dateString);
@@ -53,3 +68,33 @@ const loadProjects = async () => {
 };
 
 loadProjects();
+
+const preferredTheme = getPreferredTheme();
+setTheme(preferredTheme);
+
+themeToggle.addEventListener("click", () => {
+  const next = document.documentElement.getAttribute("data-theme") === "dark" ? "light" : "dark";
+  localStorage.setItem(storageKey, next);
+  setTheme(next);
+});
+
+window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", (event) => {
+  if (!localStorage.getItem(storageKey)) {
+    setTheme(event.matches ? "dark" : "light");
+  }
+});
+
+const toggleBackToTop = () => {
+  if (window.scrollY > 400) {
+    backToTop.classList.add("show");
+  } else {
+    backToTop.classList.remove("show");
+  }
+};
+
+window.addEventListener("scroll", toggleBackToTop);
+toggleBackToTop();
+
+backToTop.addEventListener("click", () => {
+  window.scrollTo({ top: 0, behavior: "smooth" });
+});

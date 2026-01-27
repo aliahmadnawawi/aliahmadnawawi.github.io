@@ -6,8 +6,26 @@
     <title>Ali Ahmad Nawawi - Portfolio</title>
     <meta
       name="description"
-      content="Ali Ahmad Nawawi landing page: GitHub projects, YouTube videos, and contact links."
+      content="Ali Ahmad Nawawi portfolio: GitHub projects, YouTube videos, and professional links."
     />
+    <meta name="keywords" content="Ali Ahmad Nawawi, portfolio, GitHub, YouTube, developer" />
+    <meta name="author" content="Ali Ahmad Nawawi" />
+    <meta name="robots" content="index, follow" />
+    <meta property="og:title" content="Ali Ahmad Nawawi - Portfolio" />
+    <meta
+      property="og:description"
+      content="Explore Ali Ahmad Nawawi's GitHub projects, videos, and professional links."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="aliahmadnawawi.png" />
+    <meta property="og:url" content="https://aliahmadnawawi.github.io/" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Ali Ahmad Nawawi - Portfolio" />
+    <meta
+      name="twitter:description"
+      content="GitHub projects, YouTube videos, and professional profile."
+    />
+    <meta name="twitter:image" content="aliahmadnawawi.png" />
     <link rel="stylesheet" href="styles.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -26,7 +44,12 @@
           <a href="#cv">CV</a>
           <a href="#contact">Contact</a>
         </div>
-        <a class="btn ghost" href="#contact">Collaborate</a>
+        <div class="nav-actions">
+          <button id="theme-toggle" class="btn ghost" type="button" aria-pressed="false">
+            Dark Mode
+          </button>
+          <a class="btn ghost" href="#contact">Collaborate</a>
+        </div>
       </nav>
     </header>
 
@@ -68,8 +91,8 @@
 
       <section id="contact" class="section">
         <div class="section-head">
-          <h2>Links & Social</h2>
-          <p>Find me on your favorite platforms.</p>
+          <h2>Social Media</h2>
+          <p>Connect with me on social platforms.</p>
         </div>
         <div class="social-grid">
           <a class="card link-card" href="https://instagram.com/aliahmdnawawi" target="_blank">
@@ -80,10 +103,6 @@
             Facebook
           </a>
           <a class="card link-card" href="https://t.me/aliahmadnawawi" target="_blank">Telegram</a>
-          <a class="card link-card" href="https://lynk.id/aliahmadnawawi" target="_blank">Store</a>
-          <a class="card link-card" href="https://buymeacoffee.com/aliahmadnawawi" target="_blank">
-            Buy Me a Coffee
-          </a>
           <a class="card link-card" href="https://youtube.com/@aliahmadnawawi" target="_blank">
             YouTube Channel
           </a>
@@ -101,6 +120,18 @@
         <div class="section-actions">
           <a class="btn ghost" href="https://github.com/aliahmadnawawi" target="_blank">
             View All on GitHub
+          </a>
+        </div>
+      </section>
+
+      <section id="store" class="section">
+        <div class="section-head">
+          <h2>Store</h2>
+          <p>Discover my curated products and recommendations.</p>
+        </div>
+        <div class="cards-grid">
+          <a class="card link-card" href="https://lynk.id/aliahmadnawawi" target="_blank">
+            Visit Store
           </a>
         </div>
       </section>
@@ -183,11 +214,27 @@
           </div>
         </div>
       </section>
+
+      <section id="support" class="section">
+        <div class="section-head">
+          <h2>Support</h2>
+          <p>If my work helps you, consider supporting my journey.</p>
+        </div>
+        <div class="cards-grid">
+          <a class="card link-card" href="https://buymeacoffee.com/aliahmadnawawi" target="_blank">
+            Buy Me a Coffee
+          </a>
+        </div>
+      </section>
     </main>
 
     <footer class="site-footer">
       <p>© 2026 Ali Ahmad Nawawi. Built with GitHub Pages.</p>
     </footer>
+
+    <button id="back-to-top" class="back-to-top" type="button" aria-label="Back to top">
+      ↑
+    </button>
 
     <script src="script.js"></script>
   </body>
