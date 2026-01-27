@@ -1,5 +1,4 @@
 const projectsGrid = document.getElementById("projects-grid");
-const backToTop = document.getElementById("back-to-top");
 
 const formatDate = (dateString) => {
   const date = new Date(dateString);
@@ -42,7 +41,7 @@ const loadProjects = async () => {
     const data = await response.json();
     const filtered = data
       .filter((repo) => !repo.fork)
-      .slice(0, 6);
+      .slice(0, 3);
     renderProjects(filtered);
   } catch (error) {
     projectsGrid.innerHTML = `
@@ -54,18 +53,3 @@ const loadProjects = async () => {
 };
 
 loadProjects();
-
-const toggleBackToTop = () => {
-  if (window.scrollY > 400) {
-    backToTop.classList.add("show");
-  } else {
-    backToTop.classList.remove("show");
-  }
-};
-
-window.addEventListener("scroll", toggleBackToTop);
-toggleBackToTop();
-
-backToTop.addEventListener("click", () => {
-  window.scrollTo({ top: 0, behavior: "smooth" });
-});
