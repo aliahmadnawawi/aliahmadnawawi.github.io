@@ -16,7 +16,7 @@ const renderProjects = (projects) => {
     card.className = "card";
     card.innerHTML = `
       <h3>${repo.name}</h3>
-      <p>${repo.description || "Belum ada deskripsi."}</p>
+      <p>${repo.description || "No description yet."}</p>
       <div class="project-meta">
         <span>${repo.language || "Mixed"}</span>
         <span>★ ${repo.stargazers_count}</span>
@@ -46,7 +46,7 @@ const loadProjects = async () => {
   } catch (error) {
     projectsGrid.innerHTML = `
       <div class="card loading">
-        Maaf, data GitHub belum bisa dimuat. Silakan cek langsung di GitHub.
+        Sorry, GitHub data couldn't be loaded. Please check GitHub directly.
       </div>
     `;
   }

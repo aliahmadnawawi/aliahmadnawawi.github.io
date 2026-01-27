@@ -1,3 +1,3 @@
-Letakkan file CV Anda di folder ini.
-Nama file yang direkomendasikan:
+Place your CV file in this folder.
+Recommended filename:
 Ali_Ahmad_Nawawi_CV.pdf
